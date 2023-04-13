@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidNoMaster</string>
-    <string name="saluda_oe">Saluda oe</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
 </resources>

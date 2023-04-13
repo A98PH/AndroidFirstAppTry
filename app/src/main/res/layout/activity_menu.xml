@@ -11,7 +11,7 @@
         android:id="@+id/btnSaludoApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/saluda_oe" />
+        android:text="Saluda App" />
 
     <Button
         android:id="@+id/btnIMCApp"
