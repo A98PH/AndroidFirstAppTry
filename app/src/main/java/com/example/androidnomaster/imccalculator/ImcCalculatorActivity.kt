@@ -10,9 +10,11 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
     private var isMaleSelected:Boolean = true
     private var isFemaleSelected:Boolean = true
+    private var isOtherSelected:Boolean = true
 
     private lateinit var viewMale:CardView
     private lateinit var viewFemale:CardView
+    private lateinit var viewOther:CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +27,35 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private fun initComponents() {
         viewMale = findViewById(R.id.btnMan)
         viewFemale = findViewById(R.id.btnWoman)
+        viewOther = findViewById(R.id.btnOther)
     }
 
     private fun initListeners() {
-        viewMale.setOnClickListener{setGenerColor()}
-        viewFemale.setOnClickListener{setGenerColor()}
+        viewMale.setOnClickListener{
+            setGenderColor()
+            changeGender()
+        }
+        viewFemale.setOnClickListener{
+            setGenderColor()
+            changeGender()
+        }
+        viewOther.setOnClickListener{
+            setGenderColor()
+            changeGender()
+        }
     }
 
-    private fun setGenerColor() {
+    private fun changeGender() {
+        isMaleSelected = !isMaleSelected
+        isFemaleSelected = !isFemaleSelected
+        isOtherSelected = !isOtherSelected
+    }
+
+    private fun setGenderColor() {
 
         viewMale.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
         viewFemale.setCardBackgroundColor(getBackgroundColor(isFemaleSelected))
+        viewOther.setCardBackgroundColor(getBackgroundColor(isOtherSelected))
 
     }
 

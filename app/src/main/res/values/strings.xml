@@ -2,4 +2,6 @@
     <string name="app_name">AndroidNoMaster</string>
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
+    <string name="other">Otro</string>
+    <string name="height">Altura</string>
 </resources>
